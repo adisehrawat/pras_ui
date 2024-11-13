@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
     <link rel="stylesheet" href="style.css">
     <title>PRAS</title>
 </head>
@@ -124,7 +125,6 @@
                 </div>
 
             </header>
-
             <div class="trending">
                 <div class="left">
                     <h5>Trending New Song</h5>
@@ -177,75 +177,7 @@
                         <a href="#">See all</a>
                     </div>
 
-                    <div class="items">
-                        <div class="item">
-                            <div class="info">
-                                <p>01</p>
-                                <img src="assets/song-1.png">
-                                <div class="details">
-                                    <h5>Sunrise</h5>
-                                    <p>Lila Rivera</p>
-                                </div>
-                            </div>
-                            <div class="actions">
-                                <p>03:45</p>
-                                <div class="icon">
-                                    <i class='bx bxs-right-arrow'></i>
-                                </div>
-                                <i class='bx bxs-plus-square'></i>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="info">
-                                <p>02</p>
-                                <img src="assets/song-2.png">
-                                <div class="details">
-                                    <h5>Voyage</h5>
-                                    <p>Tyde Brennnan</p>
-                                </div>
-                            </div>
-                            <div class="actions">
-                                <p>04:35</p>
-                                <div class="icon">
-                                    <i class='bx bxs-right-arrow'></i>
-                                </div>
-                                <i class='bx bxs-plus-square'></i>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="info">
-                                <p>03</p>
-                                <img src="assets/song-3.png">
-                                <div class="details">
-                                    <h5>Breeze</h5>
-                                    <p>Sola Kim</p>
-                                </div>
-                            </div>
-                            <div class="actions">
-                                <p>04:22</p>
-                                <div class="icon">
-                                    <i class='bx bxs-right-arrow'></i>
-                                </div>
-                                <i class='bx bxs-plus-square'></i>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="info">
-                                <p>04</p>
-                                <img src="assets/song-4.png">
-                                <div class="details">
-                                    <h5>Twilight</h5>
-                                    <p>Jett Lawsonn</p>
-                                </div>
-                            </div>
-                            <div class="actions">
-                                <p>03:17</p>
-                                <div class="icon">
-                                    <i class='bx bxs-right-arrow'></i>
-                                </div>
-                                <i class='bx bxs-plus-square'></i>
-                            </div>
-                        </div>
+                    <div class="items" id="songContainer">
                     </div>
 
                 </div>
@@ -277,31 +209,33 @@
                         <i class='bx bxs-playlist'></i>
                     </div>
                     <div class="song-info">
-                        <img src="assets/player.png">
-                        <div class="description">
-                            <h3>Ripple Echoes</h3>
-                            <h5>Kael Fischer</h5>
-                            <p>Best of 2024</p>
+                        <div class="container1">
+                            <!--===============Player Image================= -->
+                            <div class="player_img">
+                                <img src="imgs_audio/img-1.jpg" id="cover" class="active" />
+                            </div>
+                            <!--============Player Content -->
+                            <h2 id="music_title">Capital Letters</h2>
+                            <h3 id="musric_artist">Lorem, ipsum dolor.</h3>
+                            <!--==============Player Progress & Timmer -->
+                            <div class="player_progress" id="player_progress">
+                                <div class="progress" id="progress">
+                                    <div class="music_duration">
+                                        <span id="current_time">0:00</span>
+                                        <span id="duration">0:00</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <audio id="myAudio" >
+                                <source src="" type="audio/mpeg">
+                            </audio>
+                            <!--==============Player Controllers -->
+                            <div class="player_controls">
+                                <i class="fa-solid fa-backward" title="Previous" id="prev"></i>
+                                <i class="fa-solid fa-play play-button" title="Play" id="play"></i>
+                                <i class="fa-solid fa-forward" title="Next" id="next"></i>
+                            </div>
                         </div>
-                        <div class="progress">
-                            <p>02:45</p>
-                            <div class="active-line"></div>
-                            <div class="deactive-line"></div>
-                            <p>01:02</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="player-actions">
-                    <div class="buttons">
-                        <i class='bx bx-repeat'></i>
-                        <i class='bx bx-first-page'></i>
-                        <i class='bx bxs-right-arrow play-button'></i>
-                        <i class='bx bx-last-page'></i>
-                        <i class='bx bx-transfer-alt'></i>
-                    </div>
-                    <div class="lyrics">
-                        <i class='bx bx-chevron-up'></i>
-                        <h5>LYRICS</h5>
                     </div>
                 </div>
 
